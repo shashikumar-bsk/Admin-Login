@@ -1,25 +1,28 @@
 .dashboard {
-    display: flex;
-    height: 100vh;
-    background-image: url("../assets/Dashboard2.png"); /* Replace with actual image */
-    background-size: cover;
-    width: 92vw;
-    padding: 50px;
+  display: flex;
+  height: 100vh;
+  background-image: url("../assets/Dashboard2.png"); /* Replace with actual image */
+  background-size: cover;
+  width: 100vw; /* Ensure it takes full width */
+  padding: 50px;
+  box-sizing: border-box; /* Ensures padding is included in the width calculation */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-  
-  .main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px; /* Ensures spacing from the top */
+  width: 100%; /* Prevent overflow */
+  box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
 
-  }
-  
-  .content-area {
-    /* padding: 20px; */
-    background-color: rgba(255, 255, 255, 0.8); /* Optional overlay effect */
-    /* height: 100%; */
-    margin: 20px;
-    border-radius: 20px;
-  }
-  
+.content-area {
+  margin-top: 20px; /* Adds space between header and content */
+  margin-left: 23px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  width: 100%; /* Prevent overflow */
+  box-sizing: border-box; /* Ensures padding and margin are included in the width calculation */
+}

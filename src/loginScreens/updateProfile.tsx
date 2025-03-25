@@ -22,7 +22,7 @@ const ProfileUpdate: React.FC = () => {
   // Fetch profile data from API
   useEffect(() => {
     const fetchProfile = async () => {
-      const token = localStorage.getItem("authToken");
+      const token = localStorage.getItem("token");
       if (!token) {
         console.error("No token found");
         return;

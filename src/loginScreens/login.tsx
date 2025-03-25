@@ -23,7 +23,7 @@ const Login: React.FC = () => {
       const token = response.data.accessToken;
 
       if (token) {
-        localStorage.setItem("authToken", token); // ✅ Store token in localStorage
+        localStorage.setItem("token", token); // ✅ Store token in localStorage
         navigate("/welcome"); // ✅ Navigate to Welcome Screen
       } else {
         setError("Login failed. No token received."); // ❌ Show error instead of navigating to register
