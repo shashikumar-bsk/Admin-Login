@@ -33,8 +33,6 @@ const Sidebar: React.FC = () => {
         <li className="sidebar-item">Package Plan</li>
         <li className="divider"></li>
         <li className="sidebar-item">Referral History</li>
-        <li className="divider"></li>
-        <li className="sidebar-item">Google Map</li>
       </ul>
     </div>
   );
