@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { FaSearch, FaBell } from "react-icons/fa";
+import { Search as SearchIcon, Notifications as NotificationsIcon } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../components/header.css";
-import profile from "../assets/profile.webp"; // Ensure correct path
+import profile from "../assets/profile.webp";
 
 const Header: React.FC = () => {
   const [profileImage, setProfileImage] = useState<string>(profile);
@@ -29,11 +29,11 @@ const Header: React.FC = () => {
       <div className="search-bar">
         <input type="text" placeholder="Search..." />
         <button className="search-btn">
-          <FaSearch />
+          <SearchIcon className="search-icon" />
         </button>
       </div>
       <div className="header-icons">
-        <FaBell />
+        <NotificationsIcon className="bell-icon" /> {/* Material UI bell icon */}
         <img 
           src={profileImage} 
           alt="Profile" 

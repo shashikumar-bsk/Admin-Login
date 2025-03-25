@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../loginScreens/profileUpdate.css";
-import { FaEye, FaEyeSlash, FaCamera } from "react-icons/fa";
+import { Visibility, VisibilityOff, CameraAlt } from "@mui/icons-material";
 import axios from "axios";
 
 const ProfileUpdate: React.FC = () => {
@@ -27,7 +27,7 @@ const ProfileUpdate: React.FC = () => {
         console.error("No token found");
         return;
       }
-  
+
       try {
         const response = await axios.get(
           "https://mamun-reza-freeshops-backend.vercel.app/api/v1/admin/getProfile",
@@ -44,10 +44,10 @@ const ProfileUpdate: React.FC = () => {
         console.error("Error fetching profile:", error.response?.data || error.message);
       }
     };
-  
+
     fetchProfile();
   }, []);
-  
+
   // Handle image upload
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -72,9 +72,11 @@ const ProfileUpdate: React.FC = () => {
     }
 
     try {
-      await axios.put("https://mamun-reza-freeshops-backend.vercel.app/api/v1/admin/update", profileData, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      await axios.put(
+        "https://mamun-reza-freeshops-backend.vercel.app/api/v1/admin/update",
+        profileData,
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
       alert("Profile updated successfully!");
     } catch (error) {
       console.error("Error updating profile:", error);
@@ -94,7 +96,7 @@ const ProfileUpdate: React.FC = () => {
                 <img src={image} alt="Profile" className="profile-pic" />
               ) : (
                 <div className="profile-placeholder">
-                  <FaCamera size={40} color="#999" />
+                  <CameraAlt style={{ fontSize: 40, color: "#999" }} />
                 </div>
               )}
             </label>
@@ -122,7 +124,7 @@ const ProfileUpdate: React.FC = () => {
                 placeholder="Enter new password"
               />
               <button type="button" className="password-toggle" onClick={togglePasswordVisibility}>
-                {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+                {passwordVisible ? <VisibilityOff /> : <Visibility />}
               </button>
             </div>
 
