@@ -1,0 +1,25 @@
+.dashboard {
+    display: flex;
+    height: 100vh;
+    background-image: url("../assets/Dashboard2.png"); /* Replace with actual image */
+    background-size: cover;
+    width: 92vw;
+    padding: 50px;
+}
+
+  
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  .content-area {
+    /* padding: 20px; */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional overlay effect */
+    /* height: 100%; */
+    margin: 20px;
+    border-radius: 20px;
+  }
+  

@@ -1,0 +1,162 @@
+/* Background styling */
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../assets/login-bg.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+  
+/* Main Login Container */
+.login-container {
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.089);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* Left Section */
+.left-section {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+}
+/* Divider */
+.divider {
+    width: 2px;
+    background-color: red;
+    height: 97%;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Circle at the top of the divider */
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    width: 12px; /* Adjust size as needed */
+    height: 12px;
+    background-color: red;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Circle at the top */
+.divider::before {
+    top: -6px;
+}
+
+/* Circle at the bottom */
+.divider::after {
+    bottom: -6px;
+}
+
+
+/* Right Section */
+.right-section {
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    background: white;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    text-align: center;
+}
+
+/* Headings and Paragraphs */
+h3, 
+p {
+    text-align: start;
+    color: #333;
+    margin: 0px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 14px;
+    color: #7F7F7F;
+}
+
+/* Labels */
+label {
+    text-align: start;
+    font-size: 12px; /* Adjust as needed */
+    display: block; /* Ensures proper alignment */
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Input Fields */
+input {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: start;
+}
+
+/* Password Container */
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Buttons & Links */
+.login-button {
+    background-color:#199FB1;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* Forgot Password & Create Account */
+.forgot-password,
+.create-account {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.forgot-password a{
+    text-decoration: none;
+    color:#7F7F7F;
+}
+.create-account a {
+    text-decoration: none;
+    color:#7CB5EC;
+}
